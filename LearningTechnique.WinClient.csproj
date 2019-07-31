@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PostSharp.6.1.8-preview\build\PostSharp.props" Condition="Exists('..\packages\PostSharp.6.1.8-preview\build\PostSharp.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48FB50F2-65D9-4D5E-909C-6E3F80FC7416}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LearningTechnique.WinClient</RootNamespace>
+    <AssemblyName>LearningTechnique.WinClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>D:\LearningTechnique\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B4C432E477D6995F74E7FAA6E2CF75849ED4D127</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LearningTechnique.WinClient_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0-preview3-35497\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0-preview3-35497\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.4.0.0-beta-0134\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=6.1.8.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\packages\PostSharp.Redist.6.1.8-preview\lib\net45\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientMetods\ClientHelper.cs" />
+    <Compile Include="CustomComponent\GroupName.cs" />
+    <Compile Include="CustomComponent\uCtrlEducationFrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\uCtrlEducationFrm.Designer.cs">
+      <DependentUpon>uCtrlEducationFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\uCtrlUserAccounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\uCtrlUserAccounts.Designer.cs">
+      <DependentUpon>uCtrlUserAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\uCtrlUserPolicy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\uCtrlUserPolicy.Designer.cs">
+      <DependentUpon>uCtrlUserPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\UserControlTodoList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\UserControlTodoList.Designer.cs">
+      <DependentUpon>UserControlTodoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEducation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEducation.Designer.cs">
+      <DependentUpon>frmEducation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotificationcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotificationcs.Designer.cs">
+      <DependentUpon>frmNotificationcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoftware.Designer.cs">
+      <DependentUpon>frmSoftware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubGroup.Designer.cs">
+      <DependentUpon>frmSubGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTable.Designer.cs">
+      <DependentUpon>frmTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComponent\miniForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomComponent\miniForm.Designer.cs">
+      <DependentUpon>miniForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTodoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTodoList.Designer.cs">
+      <DependentUpon>frmTodoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomComponent\uCtrlEducationFrm.resx">
+      <DependentUpon>uCtrlEducationFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\uCtrlUserAccounts.resx">
+      <DependentUpon>uCtrlUserAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\uCtrlUserPolicy.resx">
+      <DependentUpon>uCtrlUserPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\UserControlTodoList.resx">
+      <DependentUpon>UserControlTodoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddItem.resx">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEducation.resx">
+      <DependentUpon>frmEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotificationcs.resx">
+      <DependentUpon>frmNotificationcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoftware.resx">
+      <DependentUpon>frmSoftware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubGroup.resx">
+      <DependentUpon>frmSubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTable.resx">
+      <DependentUpon>frmTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomComponent\miniForm.resx">
+      <DependentUpon>miniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTodoList.resx">
+      <DependentUpon>frmTodoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="LearningTechnique.WinClient_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\frmTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learn-anything-with-feynman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Education_3069198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_calendar-clock_299096.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Education_30691981.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_sign-up_49622.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_file-code_299099.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_User_Executive_1_1218730.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LearningTechnique.BusinessDTO\LearningTechnique.BusinessDTO.csproj">
+      <Project>{e468a168-3e41-4950-a370-a40c7c942c01}</Project>
+      <Name>LearningTechnique.BusinessDTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearningTechnique.Business\LearningTechnique.Business.csproj">
+      <Project>{0f2a81a9-32b9-43ff-ad5f-c0fd59fcf229}</Project>
+      <Name>LearningTechnique.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearningTechnique.Core\LearningTechnique.Core.csproj">
+      <Project>{e3ba520d-6a25-4be5-8439-94a64f244795}</Project>
+      <Name>LearningTechnique.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearningTechnique.CrosCuttingConcerns\LearningTechnique.CrosCuttingConcerns.csproj">
+      <Project>{c4c16511-30ae-4b3d-b455-9e1618d23de7}</Project>
+      <Name>LearningTechnique.CrosCuttingConcerns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearningTechnique.DataAccess\LearningTechnique.DataAccess.csproj">
+      <Project>{d9c0638f-4adf-4afc-a994-40030e025402}</Project>
+      <Name>LearningTechnique.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearningTechnique.Entity\LearningTechnique.Entity.csproj">
+      <Project>{e559056d-eb57-4405-8519-b2c3818d47d5}</Project>
+      <Name>LearningTechnique.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearningTechnique.RTFEditor\Workaholic.RTFEditor.csproj">
+      <Project>{4A366758-F55D-4D40-A2E4-13507CCE3A78}</Project>
+      <Name>Workaholic.RTFEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PadLock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\token.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-button-icon-png-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vwave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entity-framework-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\html.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\js.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\json-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\react.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\json.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\java.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\css.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ElasticSearch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redis-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\todo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\PostSharp.6.1.8-preview\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PostSharp.6.1.8-preview\build\PostSharp.props'))" />
+    <Error Condition="!Exists('..\packages\PostSharp.6.1.8-preview\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PostSharp.6.1.8-preview\build\PostSharp.targets'))" />
+  </Target>
+  <Import Project="..\packages\PostSharp.6.1.8-preview\build\PostSharp.targets" Condition="Exists('..\packages\PostSharp.6.1.8-preview\build\PostSharp.targets')" />
+</Project>
